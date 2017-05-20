@@ -47,4 +47,4 @@ if __name__ == '__main__':
     end_time = time.time()
 
     print('-' * 90)
-    print(f"Results(concurrency is {'on' if concurrency else 'off'} =>): {end_time-start_time}s")
+    print(f"Results(concurrency is {'on' if concurrency else 'off'}): {end_time-start_time}s")
