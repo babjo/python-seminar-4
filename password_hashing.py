@@ -19,8 +19,8 @@ if __name__ == '__main__':
         p = Pool()
         p.map(hash_password, passwords)
     else:
-        for content in passwords:
-            hash_password(content)
+        for password in passwords:
+            hash_password(password)
 
     end_time = time.time()
 
