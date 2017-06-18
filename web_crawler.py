@@ -4,6 +4,7 @@ import sys
 import gevent
 import time
 import urllib.request
+from multiprocessing import Pool
 
 
 def crawling_product_price(product_url):
@@ -20,6 +21,7 @@ def crawling_product_price(product_url):
 
 if __name__ == '__main__':
     concurrency = sys.argv[1:2] == ['-c']
+    parallelism = sys.argv[1:2] == ['-p']
 
     product_urls = [
         'https://www.amazon.com/LG-Electronics-OLED65E7P-65-Inch-Smart/dp/B01MZF7YUD',
@@ -40,6 +42,9 @@ if __name__ == '__main__':
         monkey.patch_all()
         threads = [gevent.spawn(crawling_product_price, product_url) for product_url in product_urls]
         gevent.joinall(threads)
+    elif parallelism:
+        p = Pool()
+        p.map(crawling_product_price, product_urls)
     else:
         for product_url in product_urls:
             crawling_product_price(product_url)

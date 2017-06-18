@@ -44,6 +44,11 @@ gevent로 실행하기
 $ python web_crawler.py -c
 ```
 
+멀티프로세스로 실행하기
+```bash
+$ python web_crawler.py -p
+```
+
 ### Results
 - 걸린 시간(gevent 미적용): 29.2s
 ![crawling](images/crawling.gif)
