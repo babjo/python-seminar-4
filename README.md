@@ -1,6 +1,9 @@
 # 파이썬 4월 격월 세미나 - 동시성과 병렬성 코드
 발표에서 소개한 두 가지 문제에 대한 코드입니다.
 
+- [발표 자료](https://www.slideshare.net/chanhyeonglee3/ss-76397887/chanhyeonglee3/ss-76397887)
+- [발표 영상](https://www.youtube.com/watch?v=Iv3e9Dxt9WY)
+
 ## Environments
 - Python 3.6
 
